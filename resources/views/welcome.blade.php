@@ -11,13 +11,12 @@
         <button>データ追加</button>
     </form>
 
-    // ここから追加
     <ul>
         @foreach ($todos as $todo)
             <li>{{ $todo->text }}</li>
         @endforeach
     </ul>
-    // ここまで追加
-    
+
+
 </body>
 </html>
