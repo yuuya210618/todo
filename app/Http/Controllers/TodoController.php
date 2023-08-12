@@ -8,12 +8,13 @@ use App\Models\Todo; // 追加
 class TodoController extends Controller
 {
 
-// ここから
-
-  public function welcome()
+    public function welcome()
     {
-        return view('welcome');
+        $todos = Todo::all();
+
+        return view('welcome', compact('todos'));
     }
+    // ここまで追加
 
   public function store(Request $request)
     {
